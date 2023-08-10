@@ -6,7 +6,7 @@ async function getData() {
     return dataset
 }
 
-const WIDTH = 600
+const WIDTH = 1000
 const HEIGHT = 350
 
 const PADDING = {
@@ -17,7 +17,7 @@ const PADDING = {
 }
 
 const title = d3.select("body")
-    .append("h1")
+    .append("h2")
     .attr("id", "title")
     .text("USA GDP")
 
@@ -32,11 +32,12 @@ svg.append("text")
     .attr("y", PADDING.left / 4)
     .attr("x", 0 - (HEIGHT / 2))
     .style("text-anchor", "middle")
-    .text("GDP")
+    .text("GDP (in billions)")
 
 getData().then(dataset => {
     const xScale = d3.scaleTime()
-        .domain([d3.min(dataset, d => d[0]), d3.max(dataset, d => d[0])])
+        .domain([d3.min(dataset, d => d3.timeDay.offset(d[0], -150)), 
+                d3.max(dataset, d => d3.timeDay.offset(d[0], 150))])
         .range([PADDING.left, WIDTH - PADDING.right])
 
     const yScale = d3.scaleLinear()
@@ -51,9 +52,9 @@ getData().then(dataset => {
         .enter()
         .append("rect")
         .attr("class", "bar")
-        .attr("x", d => xScale(d[0]))
+        .attr("x", d => xScale(d3.timeDay.offset(d[0], -75)))
         .attr("y", d => yScale(d[1]))
-        .attr("width", 2)
+        .attr("width", d => xScale(d3.timeDay.offset(d[0], 100)) - xScale(d[0]))
         .attr("height", d => HEIGHT - yScale(d[1]) - PADDING.top)
         .attr("data-date", d => d[0].toISOString().substring(0, 10))
         .attr("data-gdp", d => d[1])
