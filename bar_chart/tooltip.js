@@ -16,7 +16,6 @@ const mouseover = function (event, d) {
         .style("opacity", 1)
         .attr("data-date", d[0].toISOString().substring(0, 10))
     d3.select(this)
-        .style("stroke", "black")
         .style("opacity", 1)
 }
 
@@ -30,6 +29,4 @@ const mousemove = function (event, d) {
 const mouseleave = function (event, d) {
     tooltip
         .style("opacity", 0)
-    d3.select(this)
-        .style("stroke", "none")
 }

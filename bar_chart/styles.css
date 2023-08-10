@@ -11,11 +11,11 @@ body {
 }
 
 .bar {
-    fill: #2c1aff;
+    fill: #1976d2;
 }
 
 .bar:hover {
-    fill: #8076ff;
+    fill: #84bbf0;
 }
 
 #tooltip {
@@ -34,4 +34,11 @@ body {
 
 .axis-text {
     fill: #757575;
+    text-anchor: middle;
+}
+
+.caption {
+    fill: #8f8f8f;
+    font-size: 0.7em;
+    text-anchor: end;
 }
