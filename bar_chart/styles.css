@@ -1,9 +1,21 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #chart {
     background-color: white;
 }
 
+#title {
+    color: #474747;
+}
+
 .bar {
     fill: #2c1aff;
+}
+
+.bar:hover {
+    fill: #8076ff;
 }
 
 #tooltip {
@@ -14,4 +26,12 @@
     border-width: 2px;
     border-radius: 5px;
     padding: 5px;
+}
+
+.axis {
+    color: #757575;
+}
+
+.axis-text {
+    fill: #757575;
 }

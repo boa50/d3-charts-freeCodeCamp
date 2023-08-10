@@ -28,6 +28,7 @@ const svg = d3.select("body")
     .attr("height", HEIGHT)
 
 svg.append("text")
+    .attr("class", "axis-text")
     .attr("transform", "rotate(-90)")
     .attr("y", PADDING.left / 4)
     .attr("x", 0 - (HEIGHT / 2))
@@ -64,11 +65,13 @@ getData().then(dataset => {
 
     svg.append("g")
         .attr("id", "x-axis")
+        .attr("class", "axis")
         .attr("transform", "translate(0, " + (HEIGHT - PADDING.top) + ")")
         .call(xAxis)
 
     svg.append("g")
         .attr("id", "y-axis")
+        .attr("class", "axis")
         .attr("transform", "translate(" + PADDING.left + ", 0)")
         .call(yAxis)
 })
