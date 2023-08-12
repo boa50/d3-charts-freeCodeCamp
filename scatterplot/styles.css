@@ -1,0 +1,61 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#chart {
+    background-color: white;
+}
+
+#title {
+    color: #474747;
+}
+
+#subtitle {
+    margin: 0;
+    color: #757575;
+}
+
+.dot {
+    opacity: 0.7;
+}
+
+.no-doping {
+    fill: #1976d2;
+}
+
+.no-doping:hover {
+    fill: #84bbf0;
+}
+
+.dopping {
+    fill: #f57c00;
+}
+
+.dopping:hover {
+    fill: #ffbe7a;
+}
+
+#tooltip {
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.axis {
+    color: #757575;
+}
+
+.axis-text {
+    fill: #757575;
+    text-anchor: middle;
+}
+
+.caption {
+    fill: #8f8f8f;
+    font-size: 0.7em;
+    text-anchor: end;
+}
