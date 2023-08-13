@@ -1,0 +1,41 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#chart {
+    background-color: white;
+}
+
+#title {
+    color: #474747;
+}
+
+#description {
+    margin: 0;
+    color: #757575;
+}
+
+#tooltip {
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.axis {
+    color: #757575;
+}
+
+.axis-text {
+    fill: #757575;
+    text-anchor: middle;
+}
+
+.caption {
+    fill: #8f8f8f;
+    font-size: 0.7em;
+    text-anchor: end;
+}
